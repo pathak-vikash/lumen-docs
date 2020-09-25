@@ -1,5 +1,6 @@
 # Release Notes
 
+- [7.0.0](#7.0.0)
 - [6.0.0](#6.0.0)
 - [5.8.0](#5.8.0)
 - [5.7.0](#5.7.0)
@@ -11,6 +12,11 @@
 - [5.1.0](#5.1.0)
 - [5.0.4](#5.0.4)
 - [5.0 (Based On Laravel 5.0.x)](#5.0)
+
+<a name="7.0.0"></a>
+## Lumen 7.0.0
+
+Lumen 7.0 upgrades the framework's underlying Laravel components to the `7.x` series.
 
 <a name="6.0.0"></a>
 ## Lumen 6.0.0
@@ -58,7 +64,7 @@ Lumen 5.2 represents a shift on slimming Lumen to focus solely on serving statel
 
 ### Authentication
 
-Because sessions are no longer included with Lumen, authentication must be done statelessly using API tokens or headers. You have complete control over the authentication process in the new `AuthServiceProvider`. Please review the [authentication documentation](/docs/{{version}}/authentication) for more information.
+Because sessions are no longer included with Lumen, authentication must be done stateless using API tokens or headers. You have complete control over the authentication process in the new `AuthServiceProvider`. Please review the [authentication documentation](/docs/{{version}}/authentication) for more information.
 
 ### Testing Helpers
 

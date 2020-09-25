@@ -5,7 +5,9 @@
 
 The Lumen queue service provides a unified API across a variety of different queue back-ends. Queues allow you to defer the processing of a time consuming task, such as performing a task on a remote server, until a later time which drastically speeds up web requests to your application.
 
-Like many other parts of the framework, Lumen's queued jobs function identically to Laravel's queued jobs. So, to learn more about queuing jobs in Lumen, please review the [full Laravel queue documentation](https://laravel.com/docs/queues).
+Like many other parts of the framework, Lumen's queued jobs function are almost identically to Laravel's queued jobs. So, to learn more about queuing jobs in Lumen, please review the [full Laravel queue documentation](https://laravel.com/docs/queues).
+
+> {note} Closure jobs are not supported by Lumen.
 
 <a name="configuration"></a>
 ### Configuration
@@ -90,7 +92,7 @@ Lumen does not include generators for automatically creating new Job classes. In
 
 #### Dispatching Jobs
 
-Again, you should consult the full Laravel documentation for complete information on dispatching queued jobs; however, just like in the Laravel framework, you may use the `dispatch` function to dispatch jobs from anywhere within your Lumen application:
+Again, you should consult the [full Laravel queue documentation](https://laravel.com/docs/queues) for complete information on dispatching queued jobs; however, just like in the Laravel framework, you may use the `dispatch` function to dispatch jobs from anywhere within your Lumen application:
 
     dispatch(new ExampleJob);
 

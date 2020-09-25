@@ -15,13 +15,17 @@ Next, configure your mail options by copying the `mail.php` configuration file f
 After creating the configuration file, you should register the mailer and its aliases within your `bootstrap/app.php` file:
 
     $app->configure('mail');
+    
+    $app->alias('mail.manager', Illuminate\Mail\MailManager::class);
+    $app->alias('mail.manager', Illuminate\Contracts\Mail\Factory::class);
+    
     $app->alias('mailer', Illuminate\Mail\Mailer::class);
     $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
     $app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
 
 The following configuration options should also be available to your Lumen application's `.env` file:
 
-    MAIL_DRIVER=smtp
+    MAIL_MAILER=smtp
     MAIL_HOST=smtp.mailtrap.io
     MAIL_PORT=2525
     MAIL_USERNAME=
